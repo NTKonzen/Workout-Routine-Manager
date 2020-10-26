@@ -11,6 +11,8 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { use
 
 const PORT = process.env.PORT || 8080;
 
+app.use(require('./routes/api-routes'))
+
 app.listen(PORT, () => {
     console.log(`App is listening on PORT ${PORT}`);
 });
